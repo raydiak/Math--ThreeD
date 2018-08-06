@@ -1,7 +1,6 @@
 use v6;
-use Panda::Builder;
 
-class Build is Panda::Builder {
+class Build {
     method build ($where) {
         require($?FILE.IO.parent.child('gen-libs.p6').absolute);
     }
