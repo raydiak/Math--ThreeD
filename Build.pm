@@ -2,7 +2,8 @@ use v6;
 
 class Build {
     method build ($where) {
-        require($?FILE.IO.parent.child('gen-libs.p6').absolute);
+        chdir $where;
+        require($?FILE.IO.parent.child('tools/gen-libs.p6').absolute);
     }
 }
 

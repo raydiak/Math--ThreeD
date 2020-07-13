@@ -273,7 +273,6 @@ class Math::ThreeD::Library {
 
     method write (Str:D $filename) {
         print "Writing $filename...";
-        chdir $?FILE.IO.dirname;
         my $file = $filename.IO;
         $file.parent.mkdir;
         my $out = $file.open(:w);
